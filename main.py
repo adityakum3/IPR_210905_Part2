@@ -72,7 +72,7 @@ def main():
 
         prediction = 'genuine' if np.mean(fusion_score) > 0.5 else 'imposter'
         predictions.append(prediction)
-
+        print(f"Prediction: {prediction}", end='\n\n')
     genuine_count = predictions.count('genuine')
     total_count = len(predictions)
     percentage = (genuine_count / total_count) * 100
